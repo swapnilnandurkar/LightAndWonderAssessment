@@ -34,26 +34,17 @@ public class WebDriverManager {
         return driver;
     }
 
-    private WebDriver createRemoteDriver() {
-        throw new RuntimeException("RemoteWebDriver is not yet implemented");
-    }
-
     private WebDriver createLocalDriver() {
         switch (driverType) {
             case FIREFOX:
                 driver = new FirefoxDriver();
                 break;
             case CHROME:
-                System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
+                System.setProperty(CHROME_DRIVER_PROPERTY, System.getProperty("user.dir") + "/lib/chromedriver.exe");
                 driver = new ChromeDriver();
                 break;
         }
         driver.manage().window().maximize();
         return driver;
-    }
-
-    public void closeDriver() {
-        driver.close();
-        driver.quit();
     }
 }

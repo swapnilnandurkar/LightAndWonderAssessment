@@ -12,19 +12,22 @@ public class PageObjectManager {
 	private CartPage cartPage;
 	private ProductPage productPage;
 	public PageObjectManager(WebDriver driver) {
+
 		this.driver = driver;
 	}
 
 	public HomePage getHomePage() {
-		return (homePage == null) ? homePage = new HomePage(driver) : homePage;
+		return (homePage == null) ? homePage = new HomePage() : homePage;
 	}
 
 	public CartPage getProductPage() {
-		return (cartPage == null) ? cartPage = new CartPage(driver) : cartPage;
+
+		return (cartPage == null) ? cartPage = new CartPage() : cartPage;
 	}
 
 	public ProductPage getCartPage() {
-		return (productPage == null) ? productPage = new ProductPage(driver) : productPage;
+		return
+				(productPage == null) ? productPage = new ProductPage() : productPage;
 	}
 
 }

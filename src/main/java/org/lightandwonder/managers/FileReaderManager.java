@@ -9,6 +9,7 @@ public class FileReaderManager {
     }
 
     public static FileReaderManager getInstance() {
+
         return fileReaderManager;
     }
 
