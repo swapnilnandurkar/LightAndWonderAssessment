@@ -9,10 +9,10 @@ public class BasePage {
     WebDriver driver;
     ConfigFileReader configFileReader;
     public BasePage() {
-        configFileReader= new ConfigFileReader();
+        /*configFileReader= new ConfigFileReader();
         WebDriverManager driverManager = new WebDriverManager();
         this.driver = driverManager.getDriver();
-        driver.get(configFileReader.getApplicationUrl());
+        driver.get(configFileReader.getApplicationUrl());*/
     }
     public void quitDriver(){
         driver.quit();

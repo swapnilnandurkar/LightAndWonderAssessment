@@ -17,17 +17,17 @@ public class PageObjectManager {
 	}
 
 	public HomePage getHomePage() {
-		return (homePage == null) ? homePage = new HomePage() : homePage;
+		return (homePage == null) ? homePage = new HomePage(driver) : homePage;
 	}
 
 	public CartPage getProductPage() {
 
-		return (cartPage == null) ? cartPage = new CartPage() : cartPage;
+		return (cartPage == null) ? cartPage = new CartPage(driver) : cartPage;
 	}
 
 	public ProductPage getCartPage() {
 		return
-				(productPage == null) ? productPage = new ProductPage() : productPage;
+				(productPage == null) ? productPage = new ProductPage(driver) : productPage;
 	}
 
 }
